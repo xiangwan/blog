@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>用于演示的博客</title>
+    <title>向晚</title>
     <link rel='stylesheet' href='css/GitHub2.css' type='text/css'/>
     <link rel='stylesheet' href='css/style.css' type='text/css'/>
     <link rel="stylesheet" href="css/highlight.css">
@@ -12,11 +12,10 @@
     <script src="js/ractive.min.js"></script>    
     <script src="js/marked.min.js"></script>    
     <script src="config.js"></script>
-    <script src="http://static.duoshuo.com/embed.js"></script>
     <script src="http://apps.bdimg.com/libs/highlight.js/8.6/highlight.min.js"></script>
 </head>
 <body>
-<div id="header"><h1><a href="#/" class="blog_title">用于演示的博客</a></h1>
+<div id="header"><h1><a href="#/" class="blog_title">向晚的博客</a></h1>
 </div>
 <div id="container">
     <center><img src="loading.gif" alt="loading" class="loading"></center>
@@ -39,7 +38,7 @@
      <h1>{{title}}</h1>
      <span class="create_at">
         <a href="{{user.html_url}}"><img src="{{user.avatar_url}}&s=18" class="avatar">.{{user.login}}</a>.
-        发表于 {{formatTime(created_at)}}</span>
+        发表于 {{formatTime(created_at)}}  <a href='{{html_url}}'>更多信息</a></span>
      <div class="content">{{{markdown2HTML(body)}}}</div>
     {{/post}}
 </script>
