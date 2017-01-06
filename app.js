@@ -13,7 +13,7 @@ function index(page){
         data:{
             filter       : 'created',
             page         : page,
-            // access_token : _config['access_token'],
+            access_token : _config['access_token'],
             per_page     : _config['per_page']
         },
         beforeSend:function(){
