@@ -82,14 +82,14 @@ function detail(id){
     if(_G.post[id].body != undefined){
       $('#container').html(_G.post[id].body);
       $('title').html(_G.post[id].title);
-      toggleDuoshuoComments('#container', id);
+      
       highlight();
       return;
     }
     $.ajax({
         url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues/" + id,
         data:{
-            // access_token:_config['access_token']
+            access_token:_config['access_token']
         },
         beforeSend:function(){
           $('#container').html('<center><img src="loading.gif" alt="loading" class="loading"></center>');
@@ -101,8 +101,7 @@ function detail(id){
                  data: {post: data}
             });
 
-            $('title').html(data.title + " | " + _config['blog_name']);
-            toggleDuoshuoComments('#container', id);
+            $('title').html(data.title + " | " + _config['blog_name']); 
             highlight();
         }
     });  
